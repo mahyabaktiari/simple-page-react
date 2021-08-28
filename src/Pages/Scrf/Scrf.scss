@@ -1,0 +1,115 @@
+$mobile: 640px;
+.container {
+  padding: 0 20px 20px;
+  font-family: "Dirooz";
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+@mixin boxSize {
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 30px;
+  width: 30%;
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+  }
+}
+input,
+select {
+  border: 1.5px solid black;
+  @include boxSize;
+}
+@mixin buttons($background) {
+  @include boxSize;
+  color: #fff;
+  background-color: $background;
+  border: none;
+  cursor: pointer;
+}
+.filterbtn {
+  @include buttons(#000089);
+}
+.excelBtn {
+  @include buttons(#68ed6d);
+}
+.input1 {
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+  }
+  width: 65%;
+  grid-row: 1;
+}
+table {
+  margin-top: 20px;
+}
+
+@mixin statusbox($background) {
+  border-radius: 20px;
+  color: #fff;
+  background-color: $background;
+  padding: 2px 15px;
+  font-size: 14px;
+}
+.buyable {
+  @include statusbox(#2196f3);
+}
+.disbuyable {
+  @include statusbox(#e91e5a);
+}
+.notdiscount {
+  color: orange;
+}
+.ant-upload.ant-upload-drag {
+  p.ant-upload-hint {
+    color: orange;
+  }
+}
+
+.ant-upload.ant-upload-drag {
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+.ant-table-tbody > tr > td,
+.ant-table tfoot > tr > td {
+  padding: 25px 16px;
+  white-space: nowrap;
+}
+
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  right: auto;
+  left: 0;
+}
+.image {
+  width: 40px;
+  height: 40px;
+}
+.modalText {
+  text-align: center;
+  font-family: "Dirooz";
+  font-family: 18px;
+  .blueText {
+    color: #2196f3;
+  }
+}
+.modalseconderyText {
+  color: orange;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 100;
+  font-family: "Dirooz";
+}
+
+.buttonsModal {
+  width: 45%;
+  height: 35px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Dirooz";
+}
